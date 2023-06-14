@@ -9,8 +9,6 @@ export type {
   BaseTestingUserConfig as TestConfig,
 } from './testing';
 
-type DropUndefined<T> = T extends undefined ? never : T;
-
 export type UserConfig<
   Extends extends {
     hooks?: ExtendHooks;
@@ -29,7 +27,7 @@ export type UserConfig<
   ExtendNormalizedConfig extends Record<string, any> = {},
 > = {
   testing?: BaseTestingUserConfig<
-    DropUndefined<Extends['userConfig']>['testing']
+    NonNullable<Extends['userConfig']>['testing']
   >;
   plugins?: PluginConfig<any>;
 
@@ -60,7 +58,7 @@ export type NormalizedConfig<
 > = {
   plugins: PluginConfig<any>;
   testing: BaseTestingNormalizedConfig<
-    DropUndefined<Extends['normalizedConfig']>['testing']
+    NonNullable<Extends['normalizedConfig']>['testing']
   >;
 
   /**
