@@ -15,6 +15,7 @@ packages:
  - 'packages/solutions/*'
  - 'packages/toolkit/*'
  - 'packages/toolkit/compiler/*'
+ - 'packages/storybook/*'
  - 'scripts/*'
  - 'tests'
  - 'tests/integration/**/*'
