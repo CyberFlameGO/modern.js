@@ -1,10 +1,6 @@
 import type WebpackChain from '@modern-js/utils/webpack-chain';
 import type webpack from 'webpack';
-import type {
-  Configuration as WebpackConfig,
-  Compiler as WebpackCompiler,
-  MultiCompiler as WebpackMultiCompiler,
-} from 'webpack';
+import type { Configuration as WebpackConfig } from 'webpack';
 import type { Options as RawTSLoaderOptions } from 'ts-loader';
 
 export type { BabelTransformOptions } from '@modern-js/types';
@@ -17,13 +13,7 @@ export type { BabelConfigUtils } from '@modern-js/babel-preset-app';
 
 export type TSLoaderOptions = Partial<RawTSLoaderOptions>;
 
-export type {
-  webpack,
-  WebpackChain,
-  WebpackConfig,
-  WebpackCompiler,
-  WebpackMultiCompiler,
-};
+export type { webpack, WebpackChain, WebpackConfig };
 
 export type {
   CSSExtractOptions,
